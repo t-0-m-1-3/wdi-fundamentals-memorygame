@@ -41,8 +41,12 @@ font-family: "Raleway", sans-serif;
 color: #F15B31;
 letter-spacing: 1px;
 font-weight: 600;
-font-
 size: 18px;
+border-bottom: 2px solid transparent;
+}
+
+a:hover {
+	border-color: white;
 }
 
 h2 {
@@ -80,6 +84,11 @@ footer{
 
 .message {
 	float: right;
+}
+
+.name {
+	color: #F15B31;
+	font-weight: 700;
 }
 
 .clearfix:after {
