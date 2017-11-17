@@ -64,3 +64,20 @@ body {
 text-align: center;
 }
 
+footer{
+	text-transform: uppercase;
+	padding: 0px 20px;
+	background-color: #0D2C40;
+	color: white;
+	font-size: 14px;
+	letter-spacing: .08em;
+	font-weight: 500;
+}
+
+.copyright {
+	float: left;
+}
+
+.message {
+	float: right;
+}
