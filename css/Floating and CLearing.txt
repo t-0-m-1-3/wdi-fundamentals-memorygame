@@ -1,0 +1,43 @@
+Floating and CLearing
+content flows from top to bottom
+what about columns or text to images?
+
+floats and clears are two new css properties
+
+block elements stack on top of one another
+
+create and number 5 div elements. color them to distinguish them.
+
+change the widths and they still stack
+
+floats move horizontally, and allow different stacks. allowing left, right, or none. none is default
+
+fall in line, line inline elements.
+
+change it to right and they'll be listed right to left. 
+
+window sizes will keep order when  adjusted.
+
+float objects Creating multiple columns, arranging text around an image, and having a logo and navigation menu on the same horizontal line in the header.
+
+issues: floated elements don't add to height of object. 
+objects further down don't know where to go
+
+clear:both
+tells the browser you've floated elements, but doesn't work all the time
+
+not clearing the div can cause wrapped text to appear behind images instead of in article format, footers may try to wrap columns.
+
+.clearfix:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+attached an after portion, and needs to pay attention to chil height. 
+
+horizontal navigation
+
