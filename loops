@@ -1,0 +1,33 @@
+loops
+
+collections are groups of values. an array is  an example of a collection. 
+
+iteration: process of doing something repeatedly. 
+
+loops are tools for iterations. 
+
+While loops: run as long as a condition holds true. 
+while (conditon){
+	//blocks of code
+}
+
+plan your way to escape a while loop in order to avoid it taking up resources.
+
+for loops
+useful when using a loop to operate on an array.
+
+for (i=0; < var.length i++){
+	//code to run
+}
+
+the loops needs three things:
+initialization
+condition
+finalExpression
+
+for (var i = 0; i < 5; i += 1){
+	// do something 5 times
+}
+
+for loops are useful while moving over arrays while loops are most useful for conditions
+
