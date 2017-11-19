@@ -25,32 +25,36 @@ var cardsInPlay = [];
 
 var checkForMatch = function() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-	//console.log("You found a match!");
+	alert("You found a match!");
 	} else {
-	//console.log("Sorry, try again.");
+	alert("Sorry, try again.");
 	}
 }
 
 
 var flipCard = function(cardId) {
 // body of function
-	console.log("User flipped " + cards[cardId].rank);
-	cardsInPlay.push(cards[cardId].rank);
-	console.log("User flipped " + cards[cardId].cardImage);
-	console.log("User flipped " + cards[cardId].suit);
-
+	console.log("User flipped " + this);
+	cardsInPlay.push(this);
+	console.log("User flipped " + this.cardImage);
+	console.log("User flipped " + this.suit);
+	
 	checkForMatch();
 
-	if (cardsInPlay.length === 2) {
-	if (cardsInPlay[0]===cardsInPlay[1]) {
-		alert("You found a match!");
-	} 
-	else {
-		alert("Sorry, try again.")
+	cardElement.setAttribute('src', this.cardImage);
+
+}
+
+var createBoard = function(){
+	for (var i = 0; i < cards.length; i++){
+		var cardElement = document.createElement('img');	
+		cardElement.className = 'card- ' + i;
+		cardElement.setAttribute('src', 'images/back.png');
+		cardElement.setAttribute('data-id', i);
+		cardElement.addEventListener('click', flipCard());
+		document.getElementById('game-board').appendChild(this.rank);
+	
 	}
 }
 
-}
-
-flipCard(0); //match
-flipCard(2); //no match
+createBoard ()
