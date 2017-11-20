@@ -35,13 +35,13 @@ var checkForMatch = function() {
 var flipCard = function() {
 // body of function
 	var cardId = this.getAttribute('data-id');
-	console.log("User flipped " + this.[1]);
+	console.log("User flipped " + this.rank);
 	cardsInPlay.push(this.rank);
-	console.log("User flipped " + this.[0]);
 	console.log("User flipped " + this.suit);
+	console.log("User flipped " + this.cardImage);
 	
+	// if (cardsInPlay.length ===2 ) {} 
 	checkForMatch();
-
 	cardElement.setAttribute('src', this.cardImage);
 
 }
@@ -52,8 +52,8 @@ var createBoard = function(){
 		cardElement.className = 'card- ' + i;
 		cardElement.setAttribute('src', 'images/back.png');
 		cardElement.setAttribute('data-id', i);
-		cardElement.addEventListener('click', flipCard());
-		document.getElementById('game-board').appendChild(cardId);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById('game-board').appendChild(flipCard);
 	
 	}
 }
