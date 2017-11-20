@@ -32,27 +32,28 @@ var checkForMatch = function() {
 }
 
 
-var flipCard = function() {
+var flipCard = function(cardElement) {
 // body of function
-	var cardId = this.getAttribute('data-id');
-	console.log("User flipped " + this.rank);
-	cardsInPlay.push(this.rank);
-	console.log("User flipped " + this.suit);
+	var cardId = cardElement.getAttribute('data-id');
+	console.log("User flipped " + cardElement.dataset.rank);
+	console.log("User flipped " + cardElement.suit);
 	console.log("User flipped " + this.cardImage);
 	
 	// if (cardsInPlay.length ===2 ) {} 
-	checkForMatch();
-	cardElement.setAttribute('src', this.cardImage);
-
+	if (cardsInPlay.length === 2) {
+		checkForMatch();
+	} else { 
+	cardsInPlay.push(cardElement);
+}
+	cardElement.setAttribute('src', cardElement.cardImage);
 }
 
 var createBoard = function(){
 	for (var i = 0; i < cards.length; i++){
 		var cardElement = document.createElement('img');	
-		cardElement.className = 'card- ' + i;
 		cardElement.setAttribute('src', 'images/back.png');
 		cardElement.setAttribute('data-id', i);
-		cardElement.addEventListener('click', flipCard);
+		cardElement.addEventListener('click', function() {flipCard(this)});
 		document.getElementById('game-board').appendChild(cardElement);
 	
 	}
